@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="300px" src="https://github.com/youkwon515/GoGunBunTu/assets/126861324/9254d7c5-7a66-4140-a311-60da1f507660">
+  <img width="300px" src="https://github.com/youkwon515/GoGunBunTu/assets/126861324/9a651147-83f2-4993-9e2d-26a10fc57805">
 </p>
 
 <h1 align="center">고군분투</h1>

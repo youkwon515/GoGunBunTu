@@ -188,7 +188,7 @@ main {
     border-radius: 100%; 
     border: 2px solid #bcbcbc; 
     cursor: pointer; 
-    transition: all 0.5s;
+    transition: all 0.2s;
 }
 
 .pc-abti-checkbox input[type="radio"]:checked + .abti-yes-label { background: #BAEAC5;}
@@ -268,7 +268,7 @@ main {
     border-radius: 100%; 
     border: 1px solid #bcbcbc; 
     cursor: pointer; 
-    transition: all 0.5s;
+    transition: all 0.2s;
     -webkit-tap-highlight-color : transparent;
 }
 

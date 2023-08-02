@@ -45,7 +45,6 @@ export default function Main({type, setBorderWidth, categoryNumber, handlePoint,
     if (submit) {
         setBorderWidth();
         const max = Math.max(...result);
-        console.log(result)
         for (let i = 0; i < result.length; i++) {
             if (max === result[i]) {maxResult.push(i);}
         }

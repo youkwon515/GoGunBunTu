@@ -55,7 +55,6 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
 
     let number = num;
 
-
     return (
         <div className={type + '-abti'}>
             <Title type={type} />
@@ -69,19 +68,19 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
                             <div>
                                 <input type='radio' name={'abti' + idx} id={'abti-yes' + idx}/>
                                 <label className='abti-yes-label' onClick={handleSelect} htmlFor={'abti-yes' + idx}></label>
-                                <label className='abti-yes-label' htmlFor={'abti-yes' + idx}>동의</label>
+                                <label className='abti-yes-label' onClick={handleSelect} htmlFor={'abti-yes' + idx}>동의</label>
                             </div>
                             <div>
                                 <input type='radio' name={'abti' + idx} id={'abti-no' + idx}/>
                                 <label className='abti-no-label' onClick={handleSelect} htmlFor={'abti-no' + idx}></label>
-                                <label className='abti-no-label' htmlFor={'abti-no' + idx}>비동의</label>
+                                <label className='abti-no-label' onClick={handleSelect} htmlFor={'abti-no' + idx}>비동의</label>
                             </div>
                         </div>
                     </div>
                 );
             })}
 
-            {page === 6 ? <button className={type + '-abti-button'} onClick={handleChecker2}>완료&#62;</button> : <button className={type + '-abti-button'} onClick={handleChecker1}>다음&#62;</button>}
+            {page === 6 ? <button className={type + '-abti-button'} onClick={handleChecker2}>결과&#62;</button> : <button className={type + '-abti-button'} onClick={handleChecker1}>다음&#62;</button>}
         </div>
     )
 }

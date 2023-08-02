@@ -1,15 +1,21 @@
 import Title from "../Title"
 
-export default function Result({type = 'pc', result, certificateList, jobList}) {
+export default function Result({type = 'pc', Rresult, result, certificateList, jobList}) {
     
-    
+    console.log(Rresult)
 
     return (
         <div className={type + '-result'}>
             <Title type={type}/>
-            <h2>{result + " 유형"}</h2>
-            <p>{certificateList}</p>
-            <p>{jobList}</p>
+            <div className={type + '-result-category-box'}>
+                <h2>{result + " 유형"}</h2>
+            </div>
+            <div className={type + '-result-contents-box'}>
+                <p className={type + '-result-certificateList-box'}>추천 자격증</p>
+                <p>{certificateList}</p>
+                <p className={type + '-result-jobList-box'}>유망 직업</p>
+                <p>{jobList}</p>
+            </div>
         </div>
     )
 }

@@ -9,11 +9,12 @@ export default function Result({type = 'pc', Rresult, result, certificateList, j
                 <h2>{result + " 유형"}</h2>
             </div>
             <div className={type + '-result-contents-box'}>
-                <p className={type + '-result-certificateList-box'}>추천 자격증</p>
-                <p>{certificateList}</p>
-                <p className={type + '-result-jobList-box'}>유망 직업</p>
-                <p>{jobList}</p>
+                <p className={type + '-result-main-text'}>추천 자격증</p>
+                <span>{certificateList.join(', ')}</span>
+                <p className={type + '-result-main-text'}>유망 직업</p>
+                <span>{jobList.join(', ')}</span>
             </div>
+            <button className={type + '-router-button'}>투두리스트로 &#62;</button> 
         </div>
     )
 }

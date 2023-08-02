@@ -67,8 +67,10 @@ export default function Main({type, setBorderWidth, categoryNumber, handlePoint,
             category = '컴퓨터';
         } else if (recommend === 5) {
             category = '음악';
+        } else if (recommend === 6) {
+            category = '교육';
         }
-        
+
         categoryNum = recommend;
         
 

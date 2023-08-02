@@ -69,7 +69,7 @@
         "query" : [
             "학습하고 싶은 외국어가 있다.",
             "언어 학습을 통해 성취감을 느낀다.",
-            "언어 학습 과정을 영상이다 블로그로 남기고 싶다."
+            "언어 학습 과정을 영상이나 블로그로 남기고 싶다."
             
         ]
     },
@@ -146,7 +146,22 @@
         ]
     },
 
-    "Bonus" : {
+    "Teach" : {
+        "certificate" : [
+            "NCC(Counselor Certification)",
+            "CCE(Certified Credentialing Executive) ",
+            "교사 자격증",
+            "Educational Researcher Certification",
+            "온라인 교육 자격증"
+        ],
+
+        "job" : [
+            "교육 컨설턴트",
+            "교육 프로그램 평가자",
+            "학원 강사",
+            "교육 저널리스트"
+        ],
+
         "query" : [
             "남을 가르치는 것을 좋아한다.",
             "혼자 보다 다른 사람과 같이 하는 것이 더 즐겁다.",

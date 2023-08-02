@@ -22,11 +22,9 @@ function App() {
 
   const handlePoint = (point) => {
     setResult([...result, point]);
-    console.log(result)
   }
 
   const handleResultSet = (result, resultNum) => {
-    
     setResultCategory(result);
     setCategoryNumber(resultNum)
   }

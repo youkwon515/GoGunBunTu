@@ -1,8 +1,6 @@
 import Title from "../Title"
 
 export default function Result({type = 'pc', Rresult, result, certificateList, jobList}) {
-    
-    console.log(Rresult)
 
     return (
         <div className={type + '-result'}>

@@ -102,8 +102,8 @@ function TodoListPage() {
                     }   
 
                 </div>
-                {is !== "pc" ? <Footer /> : ""}
             </Main>
+            {is !== "pc" ? <Footer /> : ""}
         </>
     );
 }

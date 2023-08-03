@@ -1,7 +1,7 @@
 import Title from "../Title"
-
-export default function Result({type = 'pc', Rresult, result, certificateList, jobList}) {
-
+import { Link } from "react-router-dom"
+export default function Result({type, Rresult, result, certificateList, jobList}) {
+    
     return (
         <div className={type + '-result'}>
             <Title type={type}/>
@@ -14,7 +14,10 @@ export default function Result({type = 'pc', Rresult, result, certificateList, j
                 <p className={type + '-result-main-text'}>유망 직업</p>
                 <span>{jobList.join(', ')}</span>
             </div>
-            <button className={type + '-router-button'}>투두리스트로 &#62;</button> 
+            <div className={type + "-router-box flex-center-center"}>
+                <button className={type + '-router-button'}><Link to="/">홈으로 &#62;</Link></button> 
+                <button className={type + '-router-button'}><Link to="/">투두리스트로 &#62;</Link></button> 
+            </div>
         </div>
     )
 }

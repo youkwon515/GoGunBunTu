@@ -47,7 +47,7 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
     const handleChecker2 = () => {
         if (result["yes1"] !== null && result["yes2"] !== null && result["yes3"] !== null) {
             pointChecker();
-            handleSubmit(true);
+            handleSubmit();
         } else {
             alert('항목을 체크해주세요');
         }

@@ -63,7 +63,7 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
                 idx += 1;
                 return (
                     <div className={type + '-abti-question-box'} key={number}>
-                        <div className={type + '-abti-question'}><span>Q{number}. {query}</span></div>
+                        <div className={type + '-abti-question'}><span>Q{number}.</span> <span>{query}</span></div>
                         <div className={type + '-abti-checkbox'}>
                             <div>
                                 <input type='radio' name={'abti' + idx} id={'abti-yes' + idx}/>

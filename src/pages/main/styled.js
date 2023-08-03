@@ -29,3 +29,22 @@ export const Text = styled.div`
         font-size: 20px;
     }
 `;
+
+export const Text2 = styled.div`
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    text-align: left;
+    
+    pointer-events: none; 
+
+    > h1 {
+        color : #417977;
+        font-size: 20px;
+    }
+
+    > p {
+        color: #4e4d4d;
+        font-size: 20px;
+    }
+`

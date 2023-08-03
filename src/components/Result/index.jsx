@@ -14,11 +14,15 @@ export default function Result({type, Rresult, result, certificateList, jobList}
                 <p className={type + '-result-main-text'}>유망 직업</p>
                 <span>{jobList.join(', ')}</span>
             </div>
+            {type === 'pc' ?
             <div className={type + "-router-box flex-center-center"}>
                 <Link to="/"><button className={type + '-router-button'}>홈 &#62;</button></Link>
                 <Link to="/todoList"><button className={type + '-router-button'}>투두리스트 &#62;</button></Link>
                 <Link to="/testSite"><button className={type + '-router-button'}>시험장 검색 &#62;</button></Link>
             </div>
+            :
+            ""
+            }
         </div>
     )
 }

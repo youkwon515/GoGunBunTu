@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 export default function Result({type, Rresult, result, certificateList, jobList}) {
     
     return (
-        <div className={type + '-result'}>
+        <div className={type + '-box'}>
             <Title type={type}/>
             <div className={type + '-result-category-box'}>
                 <h2>{result + " 유형"}</h2>
@@ -15,8 +15,9 @@ export default function Result({type, Rresult, result, certificateList, jobList}
                 <span>{jobList.join(', ')}</span>
             </div>
             <div className={type + "-router-box flex-center-center"}>
-                <button className={type + '-router-button'}><Link to="/">홈으로 &#62;</Link></button> 
-                <button className={type + '-router-button'}><Link to="/">투두리스트로 &#62;</Link></button> 
+                <Link to="/"><button className={type + '-router-button'}>홈 &#62;</button></Link>
+                <Link to="/todoList"><button className={type + '-router-button'}>투두리스트 &#62;</button></Link>
+                <Link to="/testSite"><button className={type + '-router-button'}>시험장 검색 &#62;</button></Link>
             </div>
         </div>
     )

@@ -1,4 +1,5 @@
 import Title from "../Title";
+import icon from '../../assets/armor_icon.png';
 
 export default function Abti({type = "pc", queryList, num, page, handleSubmit, handlePoint, handleNext}) {
     let result = {
@@ -56,8 +57,8 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
     let number = num;
 
     return (
-        <div className={type + '-abti'}>
-            <Title type={type} />
+        <div className={type + '-box'}>
+            <Title type={type} title="군비티아이" icon={icon} contents="군비티아이를 통해 적절한 자기계발을 추천 해드립니다."/>
             {queryList[page].map((query, idx) => {
                 number += 1;
                 idx += 1;

@@ -11,6 +11,7 @@ function MainPage() {
     let is = CheckSituation();
 
     return (
+        <>
         <Main>
         {
             is === "pc" ? (
@@ -35,11 +36,12 @@ function MainPage() {
                         <h1>군인들의 자기계발을 위한<br/>TODO LIST</h1>
                         <p>For more effective <br/>self-development!</p>
                     </S.Text2>
-                    <Footer />
                 </>
             )
         }
         </Main>
+        {is !== "pc" ? <Footer /> : ""}
+        </>
     )
 }
 

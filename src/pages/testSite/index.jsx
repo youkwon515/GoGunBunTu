@@ -70,8 +70,8 @@ function TestSitePage() {
                     ""
                     }
                 </div>
-                {is !== "pc" ? <Footer /> : ""}
             </Main>
+            {is !== "pc" ? <Footer /> : ""}
         </>
     )
 }

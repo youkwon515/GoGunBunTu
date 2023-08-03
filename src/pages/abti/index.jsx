@@ -143,8 +143,8 @@ function AbtiPage() {
     <Main>
       {submit || <Abti type={is} queryList={queryList} num={number} page={next} handleSubmit={handleSubmit} handlePoint={handlePoint} handleNext={handleNext}/>}
       {submit && <Result type={is} Rresult={result} result={resultCategory} certificateList={certificateList[categoryNumber]} jobList={jobList[categoryNumber]}/>}
-      {is !== "pc" ? <Footer /> : ""}
     </Main>
+    {is !== "pc" ? <Footer /> : ""}
   </>
   );
 }

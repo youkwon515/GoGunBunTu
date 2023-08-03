@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 const { kakao } = window;
 
-export default function Map({latitude, longitude, testSite, testSiteList}) {
+export default function Map({is, latitude, longitude, testSite, testSiteList}) {
     useEffect(() => {
         const container = document.getElementById('map'); 
         const options = { 
@@ -30,7 +30,7 @@ export default function Map({latitude, longitude, testSite, testSiteList}) {
     
     let realData = testSiteList[0];
     return (
-        <div className="map-box">
+        <div className={is + "-map-box"}>
             <div id="map" style={{
                 width : '100%',
                 height : "calc(100% - 100px)"

@@ -11,6 +11,7 @@ import Result from "../../components/Result";
 import data from '../../data/QuestionList.json';
 
 import { useState, useEffect } from "react";
+import Footer from "../../components/Footer";
 function AbtiPage() {
   const [submit, setSubmit] = useState(false);
   const [resultCategory, setResultCategory] = useState('');
@@ -142,6 +143,7 @@ function AbtiPage() {
     <Main>
       {submit || <Abti type={is} queryList={queryList} num={number} page={next} handleSubmit={handleSubmit} handlePoint={handlePoint} handleNext={handleNext}/>}
       {submit && <Result type={is} Rresult={result} result={resultCategory} certificateList={certificateList[categoryNumber]} jobList={jobList[categoryNumber]}/>}
+      {is !== "pc" ? <Footer /> : ""}
     </Main>
   </>
   );

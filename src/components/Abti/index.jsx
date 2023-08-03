@@ -80,8 +80,9 @@ export default function Abti({type = "pc", queryList, num, page, handleSubmit, h
                     </div>
                 );
             })}
-
-            {page === 6 ? <button className={type + '-router-button'} onClick={handleChecker2}>결과 &#62;</button> : <button className={type + '-router-button'} onClick={handleChecker1}>다음 &#62;</button>}
+            <div className={type + "-next-box"}>
+                {page === 6 ? <button className={type + '-router-button'} onClick={handleChecker2}>결과 &#62;</button> : <button className={type + '-router-button'} onClick={handleChecker1}>다음 &#62;</button>}
+            </div>
         </div>
     )
 }

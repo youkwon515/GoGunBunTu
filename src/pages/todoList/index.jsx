@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import {v4 as uuidv4} from 'uuid';
 import TodoList from "../../components/TodoList";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
 function TodoListPage() {
     const [todoName, setTodoName] = useState("");
@@ -81,21 +82,27 @@ function TodoListPage() {
                     <Title type={is} title="투두리스트" icon={icon} contents="스케줄을 작성해 보세요!"/>
                     <div className={is + "-input-create"}>
                             <input value={todoName} onChange={handleTodoName} onKeyUp={handleKeyPress} placeholder="오늘의 스케줄을 적어 보세요!"/>
-                            <button onClick={addTodo}>+</button>
+                            {is === "pc" ? <button onClick={addTodo}>+</button> : ""}
                     </div>
                     <div className={is + "-todoList-box"}>
                         <div className={is + "-todosList-box-input"}>
                             <input onChange={handleSearchValue} placeholder="스케줄 검색"/>
-                            <button onClick={handleAllDelete}>모두 삭제</button>
+                            {is === "pc" ? <button onClick={handleAllDelete}>모두 삭제</button> : ""}
                         </div>
-                        <TodoList todos={todos} searchValue={searchValue} deleteTodo={handleDeleteTodo} setSelectedTodoIds={setSelectedTodoIds} toggleEditTodo={toggleEditTodo} editedTodoId={editedTodoId} setEditedName={handleEditedName} editTodo={editTodo}/>
+                        <TodoList is={is} todos={todos} searchValue={searchValue} deleteTodo={handleDeleteTodo} setSelectedTodoIds={setSelectedTodoIds} toggleEditTodo={toggleEditTodo} editedTodoId={editedTodoId} setEditedName={handleEditedName} editTodo={editTodo}/>
                     </div>
-                    <div className={is + "-router-box flex-center-center"}>
-                        <Link to="/"><button className={is + '-router-button'}>홈 &#62;</button></Link>
-                        <Link to="/abti"><button className={is + '-router-button'}>군비티아이 &#62;</button></Link>
-                        <Link to="/testSite"><button className={is + '-router-button'}>시험장 검색 &#62;</button></Link>
-                    </div>
+                    {is === "pc" ?
+                        <div className={is + "-router-box flex-center-center"}>
+                            <Link to="/"><button className={is + '-router-button'}>홈 &#62;</button></Link>
+                            <Link to="/abti"><button className={is + '-router-button'}>군비티아이 &#62;</button></Link>
+                            <Link to="/testSite"><button className={is + '-router-button'}>시험장 검색 &#62;</button></Link>
+                        </div>
+                        :
+                        ""
+                    }   
+
                 </div>
+                {is !== "pc" ? <Footer /> : ""}
             </Main>
         </>
     );

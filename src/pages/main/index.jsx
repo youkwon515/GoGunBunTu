@@ -4,6 +4,8 @@ import * as S from './styled';
 import bg from '../../assets/mainBanner.png'
 import Header from "../../components/Header";
 import Main from "../../components/Main";
+import wave from '../../assets/wave.svg';
+import Footer from "../../components/Footer";
 function MainPage() {
     
     let is = CheckSituation();
@@ -26,7 +28,15 @@ function MainPage() {
                     </div>
                 </>
             ) : (
-                <h2>모바일</h2>
+                <>
+                     <Header type={is} borderWidth={100}/>
+                    <img src={wave} alt="wave" />
+                    <S.Text2>
+                        <h1>군인들의 자기계발을 위한<br/>TODO LIST</h1>
+                        <p>For more effective <br/>self-development!</p>
+                    </S.Text2>
+                    <Footer />
+                </>
             )
         }
         </Main>

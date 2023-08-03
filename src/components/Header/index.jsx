@@ -5,9 +5,12 @@ export default function Header({type = "pc", borderWidth}) {
         '--borderWidth', 
         borderWidth + "%"
     );
+    
     return (
         <header className={type + "-header"}>
-            <img src={logo} alt='logo'/>
+            <div className="logoBox">
+                <img src={logo} alt='logo'/>
+            </div>
             <div className='borderWidth-box'>
                 <div className='borderWidth'></div>
             </div>

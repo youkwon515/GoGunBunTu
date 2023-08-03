@@ -6,7 +6,7 @@ export const Background = styled.div`
     height: 100%;
     filter: brightness(55%);
     user-select: none;
-    background-image: linear-gradient(#6CA86E, rgba(115, 82, 208, 0.1)), url('${background}');
+    background-image: url('${background}');
     background-repeat: no-repeat; 
     background-position: center;
     background-size: cover; 

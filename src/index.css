@@ -11,6 +11,7 @@
     color: inherit;
     border: 0;
     text-decoration: none;
+    outline: none;
 }
 
 body {
@@ -94,7 +95,7 @@ main {
 
 /* title */
 
-.pc-abti {
+.pc-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,7 +130,7 @@ main {
 
 /* title mobile */
 
-.mobile-abti {
+.mobile-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -316,16 +317,6 @@ main {
 
 /* result */
 
-.pc-result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 30px;
-    width: 100%;
-    height: 100%;
-}
-
 .pc-result-category-box {
     display: flex;
     align-items: center;
@@ -369,15 +360,6 @@ main {
 
 /* result mobile */
 
-.mobile-result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    gap: 30px;
-    width: 100%;
-    height: 100%;
-}
 
 .mobile-result-category-box {
     display: flex;
@@ -428,4 +410,133 @@ main {
     flex-direction: column;
     bottom: 130px;
     left: 130px;
+}
+
+/* todolist */
+
+.pc-todoList-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    overflow: hidden;
+    padding: 10px;
+}
+
+.pc-todosList-box-input {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 100%;
+    height: 33px;
+}
+
+.pc-todosList-box-input input {
+    text-align: left;
+    width: 43%;
+    height: 100%;
+    border-bottom: 0.5px solid #4e4d4d;
+}
+
+.pc-todosList-box-input button {
+    width: 100px;
+    background-color: #72CCC7;
+    border-radius: 5px 5px 0 0;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.pc-input-create {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48%;
+    height: 33px;
+    border-bottom: 0.5px solid #4e4d4d;
+}
+
+.pc-input-create input {
+    width: 100%;
+}
+
+.pc-input-create button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 70px;
+    height: 100%;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 5px 5px 0 0;
+    background: #72CCC7;
+    color: #FFFFFF;
+}
+
+.overflow-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    overflow: auto;
+    width: 100%;
+    height: calc(100% - 33px);
+}
+
+.overflow-scroll::-webkit-scrollbar {width: 6px;}
+.overflow-scroll::-webkit-scrollbar-thumb {background-color: #417977; border-radius: 10px; background-clip: padding-box;}
+.overflow-scroll::-webkit-scrollbar-track {background-color: #72CCC7; border-radius: 10px;}
+
+.todo-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 20px;
+}
+
+.todo-item-btns {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+}
+
+.todo-item-btns button {
+    width: 36px;
+    height: 20px;
+    border-radius: 3px 3px 0 0;
+    background: #72CCC7;
+    color: #FFFFFF;
+}
+
+.editInput {
+    width: 40%;
+    border-bottom: 0.5px solid #4e4d4d;
+}
+
+.map-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    width: 50%;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+.map-box .title {
+    font-size: 20px;
+    font-weight: 700;
 }

@@ -1,7 +1,7 @@
 
 import Todo from '../Todo';
 
-function TodoList({todos, searchValue, deleteTodo, setSelectedTodoIds, toggleEditTodo, editedTodoId, setEditedName, editTodo}) {
+function TodoList({is, todos, searchValue, deleteTodo, setSelectedTodoIds, toggleEditTodo, editedTodoId, setEditedName, editTodo}) {
     return (
         <ul className='overflow-scroll'>
             {todos.
@@ -30,6 +30,7 @@ function TodoList({todos, searchValue, deleteTodo, setSelectedTodoIds, toggleEdi
                 return (
                     <div>
                         <Todo 
+                            is = {is}
                             key={id} 
                             name={name}
                             deleteTodo={handleDeleteTodo} 

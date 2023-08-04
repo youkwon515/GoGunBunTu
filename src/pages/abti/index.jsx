@@ -102,22 +102,10 @@ function AbtiPage() {
 
       let count1 = result.filter(element => 3 === element).length;
       let count2 = result.filter(element => 0 === element).length;
+
       
-      if (recommend === 0) {
-          category = '운동';
-      } else if (recommend === 1) {
-          category = '독서';
-      } else if (recommend === 2) {
-          category = '어학';
-      } else if (recommend === 3) {
-          category = '금융';
-      } else if (recommend === 4) {
-          category = '컴퓨터';
-      } else if (recommend === 5) {
-          category = '음악';
-      } else if (recommend === 6) {
-          category = '교육';
-      }
+      const categoryList = ["운동", "독서", "어학", "금융", "컴퓨터", "음악", "교육"];
+      category = categoryList[recommend];
 
       categoryNum = recommend;
       

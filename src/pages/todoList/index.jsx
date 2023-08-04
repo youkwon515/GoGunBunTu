@@ -81,8 +81,8 @@ function TodoListPage() {
                 <div className={is + "-box"}>
                     <Title type={is} title="투두리스트" icon={icon} contents="스케줄을 작성해 보세요!"/>
                     <div className={is + "-input-create"}>
-                            <input value={todoName} onChange={handleTodoName} onKeyUp={handleKeyPress} placeholder="오늘의 스케줄을 적어 보세요!"/>
-                            {is === "pc" ? <button onClick={addTodo}>+</button> : ""}
+                            <input value={todoName} onChange={handleTodoName} onKeyUp={handleKeyPress} placeholder="스케줄을 적어 보세요!"/>
+                            <button onClick={addTodo}>{is === "pc" ? "+" : "추가"}</button>
                     </div>
                     <div className={is + "-todoList-box"}>
                         <div className={is + "-todosList-box-input"}>

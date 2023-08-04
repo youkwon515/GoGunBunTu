@@ -594,19 +594,32 @@ main {
 }
 
 .mobile-input-create {
-    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
     width: 60%;
-    height: 33px;
-    border-bottom: 0.5px solid #4e4d4d;
+    
 }
 
 .mobile-input-create input {
     text-align: center;
     font-size: 13px;
     width: 100%;
+    border-bottom: 0.5px solid #4e4d4d;
+}
+
+.mobile-input-create button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 25px;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 3px;
+    background: #6CA86E;
+    color: #FFFFFF;
 }
 
 
@@ -631,14 +644,14 @@ main {
 }
 
 .mobile-next-box {
-    position: absolute;
+    position: fixed;
     top: 50%;
     right: 10px;
-    transform: translate(-0%, -50%);
+    transform: translate(0, -50%);
 }
 
 .mobile-next-box button {
-    width: 53px;
+    width: 50px;
     height: 50px;
     border-radius: 100%;
     background-color: #6CA86E;
